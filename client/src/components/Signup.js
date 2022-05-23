@@ -20,9 +20,42 @@ const Signup=()=>{
 
   }
 
+  function hasNumber(myString) {
+    return /\d/.test(myString);
+  }
+
   const PostData = async (e) => {
     e.preventDefault();
+    var letters = /^[A-Za-z]+$/;
     const {name,email,password,city}=user;
+
+    const hasDigits=hasNumber(name);
+    if(hasDigits){
+    window.alert("Invalid name");
+    navigate('/register');
+    return
+    }
+
+    const hasDigits2=hasNumber(city);
+    if(hasDigits2){
+    window.alert("Invalid city");
+    navigate('/register');
+    return
+    }
+
+
+    
+    if(password.length<5){
+    window.alert("Password too short");
+    navigate('/register');
+    return
+    }
+
+    if(password.length>15){
+      window.alert("Password too long");
+      navigate('/register');
+      return
+      }
 
     const res=await fetch("/register",{
       method:"POST",
@@ -39,11 +72,9 @@ const Signup=()=>{
     const data=await res.json();
     if(data.status===422 || !data){
       window.alert("Invalid Registration");
-      console.log("Invalid registration");
     }
     else{
-      window.alert("Registration Successfful");
-      console.log("Registration Successful");
+      window.alert("Registration Successful");
       navigate('/signin');
     }
   }

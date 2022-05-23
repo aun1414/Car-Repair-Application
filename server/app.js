@@ -1,6 +1,6 @@
 const express=require('express');
 
-const mongoose=require('mongoose'),Schema = mongoose.Schema;;
+const mongoose=require('mongoose'),Schema = mongoose.Schema;
 
 const app=express();
 const cookieParser = require('cookie-parser');
@@ -17,7 +17,6 @@ mongoose.connect(DB).then(()=>{
 }).catch((err)=>{
     console.log('Connection Error')
 })
-
 
 const setAdmin=async ()=>{
     try{

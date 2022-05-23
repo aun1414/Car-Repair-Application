@@ -79,7 +79,7 @@ const Workshop=()=>{
               </div>
 
               <div className="form-outline form-white mb-4">
-              <label htmlFor="city" className="form-label">city</label>
+              <label htmlFor="city" className="form-label">City</label>
         <input type="text" className="form-control" id="city" autoComplete="off" name="city" value={city} onChange={(e)=>setCity(e.target.value)} placeholder="City"/>
               </div>
 

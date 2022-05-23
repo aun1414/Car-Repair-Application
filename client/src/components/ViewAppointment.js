@@ -71,7 +71,7 @@ const ViewAppointments=()=>{
                   <>
                  <tr key={i}>
             <th scope="row" >{i + 1}</th>
-            <td>{element.user.name}</td>
+            <td >{element.user.name}</td>
             <td >{element.user.email}</td>
             <td >{element.time}</td>
             {/* <td><button type="button" className="btn btn-danger" onClick={()=>deleteWorkshop(element._id)}>Delete</button></td> */}

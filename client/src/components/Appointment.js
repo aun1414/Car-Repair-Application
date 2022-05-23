@@ -81,7 +81,7 @@ const Appointment=()=>{
 
               <div className="form-outline form-white mb-4">
               <label htmlFor="time" className="form-label">Time</label>
-        <input type="text" className="form-control" id="time" autoComplete="off" name="time" value={appointment.time} onChange={handleInputs} placeholder="Time"/>
+        <input type="time" className="form-control" id="time" autoComplete="off" name="time" value={appointment.time} onChange={handleInputs} placeholder="Time"/>
               </div>
               
               <button type="submit" name="appoint" id="appoint" className="btn btn-primary" onClick={PostData}>Make Appointment</button>

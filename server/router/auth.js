@@ -8,7 +8,7 @@ const authenticate=require('../middleware/authenticate');
 const router=express.Router();
 
 
-mongoose.connect('mongodb+srv://aun1414:aun1414@cluster0.lzljb.mongodb.net/mernSE?retryWrites=true&w=majority');
+// mongoose.connect('mongodb+srv://aun1414:aun1414@cluster0.lzljb.mongodb.net/mernSE?retryWrites=true&w=majority');
 const User = require('../models/user');
 const Appointment=require('../models/appointment');
 
@@ -58,7 +58,11 @@ router.post('/signin',async (req,res)=>{
     
     
         const userLogin=await User.findOne({email:email});
+        if(!userLogin){
+        return res.status(400).json({status:true});
+        }
         if(userLogin){
+        console.log("executed");
         const passwordMatch=await bcrypt.compare(password,userLogin.password);
         token=await userLogin.generateAuthToken();
         res.cookie("jwtoken",token,{

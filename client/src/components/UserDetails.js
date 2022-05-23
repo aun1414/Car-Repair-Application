@@ -33,7 +33,7 @@ const UserDetails=()=>{
     
     return (
         <div>
-            <table className="table">
+            <table className="table table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>

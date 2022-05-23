@@ -81,7 +81,7 @@ const EditWorkshop=()=>{
               </div>
 
               <div className="form-outline form-white mb-4">
-              <label htmlFor="city" className="form-label">city</label>
+              <label htmlFor="city" className="form-label">City</label>
         <input type="text" className="form-control" id="city" autoComplete="off" name="city" value={workshop.city} onChange={handleInputs} placeholder="City"/>
               </div>
 
