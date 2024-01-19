@@ -3,6 +3,9 @@ A project for the Software Engineering course during my undergrad in National Un
 ## Description
 A car repair web application which helps users register their car repair workshops or help them in finding a car repair shop in their city. 
 
+## Tech Stack
+MongoDB, Express.js, Node.js, React,js
+
 ## Features
 -Sign up </br>
 -Login/Logout </br>
